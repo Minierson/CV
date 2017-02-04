@@ -2,7 +2,24 @@
 <html>
 <head>
 	<title>Maciej Kienig CV</title>
-	<link type="text/css" rel="stylesheet" href="styles.css" />
+	<link type="text/css" rel="stylesheet" href="css/styles.css" />
+	<script>
+	function funkcja(elementId){
+		var x = document.getElementById(elementId);
+		if (x.style.display === "none"){
+			x.style.display = "";
+		} else {
+			x.style.display = "none";
+		}
+	}
+	function hide (){
+		var x = document.getElementsByClassName('hidable');
+			 for (i=0; i<x.length; i++){
+				x[i].style.display = "none"; 
+			}
+			
+	}
+	</script>
 </head>
 <body>
 	<div class="tlo">
@@ -30,12 +47,12 @@
 		<!--koniec nagłówka -->
 		<div class="zawartosc">
 				<table>
-						<tr onclick="funkcja1()">
+						<tr onclick="funkcja('wyksz')">
 							<th class="left"></th>
 							<th class="grube">Wykształcenie</th>
 						</tr>
 				</table>
-				<table id="wyksz">
+				<table  class="hidable" id="wyksz">
 						<tr>
 							<td class="left">2016 - 2017</td>
 							<td class="right"><p>Politechnika Białostocka Wydział Informatyki, 
@@ -50,12 +67,12 @@
 		</div>
 		<div class="zawartosc">
 			<table>
-				<tr onclick="funkcja2()">
+				<tr onclick="funkcja('zaw')">
 					<th class="left"></th>
 					<th class="grube">Doświaczenie zawodowe</th>
 				</tr>
 			</table>
-			<table id="zaw">
+			<table class="hidable" id="zaw">
 				<tr>
 					<td class="left">2013 - 2016</td>
 					<td class="right">
@@ -83,12 +100,12 @@
 		</div>
 		<div class="zawartosc">
 			<table>
-				<tr onclick="funkcja3()">
+				<tr onclick="funkcja('skill')">
 					<th class="left"></th>
 					<th class="grube">Umiejetności</th>
 				</tr>
 			</table>
-			<table id="skill">
+			<table  class="hidable" id="skill">
 				<tr>
 					<td class="left">HTML & CSS</td>
 					<td class="right">
@@ -131,14 +148,15 @@
 				</tr>
 			</table>
 		</div>
+
 		<div class="zawartosc">
-			<table onclick="funkcja4()">
+			<table onclick="funkcja('jezyk')">
 				<tr>
 					<th class="left"></th>
 					<th class="grube">Umiejętności językowe</th>
 				</tr>
 			</table>
-			<table id="jezyk">
+			<table  class="hidable" id="jezyk">
 				<tr>
 					<td class="left">Angielski</td>
 					<td class="right">
@@ -158,12 +176,11 @@
 			</table>
 		</div>
 		<div class="zawartosc">
-			<table onclick="funkcja5()">
+			<table onclick="funkcja('zainteresowania')">
 				<tr>
-					<td></td>
-					<th class="grube" colspan="6">Zainteresowania</th>
+					<th class="grube" colspan="7">Zainteresowania</th>
 				</tr>
-				<tr id="zainteresowania">
+				<tr  class="hidable" id="zainteresowania">
 					<td>Podróże</td>
 					<td>Muzyka</td>
 					<td>Film</td>
@@ -174,52 +191,19 @@
 				</tr>
 			</table>
 		</div>
+		<script>
+			hide();
+			<!-- funkcja('wyksz'); -->
+			<!-- funkcja('zaw'); -->
+			<!-- funkcja('skill'); -->
+			<!-- funkcja('jezyk'); -->
+			<!-- funkcja('zainteresowania'); -->
+		</script>
 		<div id="formulka">
 			<p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji 
 			(zgodnie z Ustawą z dnia 29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. 2016 r. poz. 922).</p>
 		</div>	
 	</div>
-	<script>
-	function funkcja1(){
-		var x = document.getElementById("wyksz");
-		if (x.style.display === "none"){
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-		}
-	}
-	function funkcja2(){
-		var x = document.getElementById("zaw");
-		if (x.style.display === "none"){
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-		}
-	}
-	function funkcja3(){
-		var x = document.getElementById("skill");
-		if (x.style.display === "none"){
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-		}
-	}
-	function funkcja4(){
-		var x = document.getElementById("jezyk");
-		if (x.style.display === "none"){
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-		}
-	}
-	function funkcja5(){
-		var x = document.getElementById("zainteresowania");
-		if (x.style.display === "none"){
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
-		}
-	}
-	</script>
+	
 </body>
 </html>
