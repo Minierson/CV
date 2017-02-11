@@ -1,9 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl">
 <head>
-	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 	<title>Maciej Kienig CV</title>
-	<link type="text/css" rel="stylesheet" href="css/styles.css" />
+	<link type="text/css" rel="stylesheet" href="css/stylesheet.css" />
 	<script type="text/javascript" src="JS/script.js"></script>	
 </head>
 <body>
@@ -176,6 +175,23 @@
 				</tr>
 			</table>
 		</div>
+                <div class="contactForm">
+                    <div id="offer" onclick="funkcja('cForm')">
+                      <h3>Zainteresowany współpracą? Wylij mi maila.</h3>
+                    </div>
+                    <div class="hidable" id="cForm">
+                        <form action="mailto:maciejkienig@gmail.com" method="post" enctype="text/plain">
+                            <label for="name">Imię:</label><br/>
+                            <input type="text" name="name" id="name"></input><br/>
+                                <label for="mail">E-mail:</label><br/>
+                                <input type="text" name="mail" id="mail"></input><br/>
+                                <label for="comment">Comment:</label><br/>
+                            <textarea name="message" id="comment" rows="10" cols="30"></textarea><br/><br/>
+                            <input type="submit" value="Wyślij"></input>
+                            <input type="reset" value="Kasuj"></input>
+                        </form>
+                    </div>
+                </div>
                 <script type="text/javascript">
 			hide();
 		</script>
