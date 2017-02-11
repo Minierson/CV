@@ -125,5 +125,22 @@ table{
 	font-size:9pt;
 	text-align: center;
 }
-
-
+.contactForm{
+    text-align: center;
+    margin:auto;
+    background-color: white;
+    width: 400px;
+    border-bottom-width: 3px;
+    border-bottom-color: #808080;
+    border-bottom-style: solid;
+    border-right-width: 3px;
+    border-right-color: #808080;
+    border-right-style: solid;
+}
+.contactForm #offer{
+    border: 1px solid #eabd98;
+    background-color: #eabd98;
+}
+.contactForm .hidable #cForm{
+    margin:50px;
+}
